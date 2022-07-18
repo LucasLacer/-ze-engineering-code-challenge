@@ -93,7 +93,7 @@ export default function ProductsPage() {
   if (loading) return <div><Header title='Produtos' /><h1>Carregando</h1></div>
   if (error) return <div><Header title='Produtos' /><h1>error</h1></div>
   function productsRender(products: Array<ProductsList>) {
-    const batata = products.map((product) =>
+    const productsMap = products.map((product) =>
       <ProductCard key={product.id} >
         <img src={product.image} alt={product.title} width='96px' height='96px'></img>
         <h3 style={{
@@ -105,7 +105,7 @@ export default function ProductsPage() {
       </ProductCard>
 
     )
-    return batata
+    return productsMap
   }
 
   return (
