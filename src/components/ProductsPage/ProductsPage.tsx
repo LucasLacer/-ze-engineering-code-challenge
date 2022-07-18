@@ -62,12 +62,12 @@ export default function ProductsPage() {
       if (productsList?.length) {
         tempList = [...productsList]
 
-        let disney = { ...product, quantity: 1 }
+        let handledProduct = { ...product, quantity: 1 }
         const item = tempList.find((p) => p.id === product.id)
         if (item) {
           const index = tempList.indexOf(item)
           tempList[index].quantity += 1
-        } else { tempList.push?.(disney) }
+        } else { tempList.push?.(handledProduct) }
       } else {
         tempList = [{ ...product, quantity: 1 }]
       }
