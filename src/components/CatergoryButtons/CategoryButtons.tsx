@@ -18,12 +18,12 @@ export default function CategoryButtons() {
   const context = useContext(categoryFunction)
 
   function categoryRender(categorys: Array<CategoryList>) {
-    const batata = categorys.map((category) =>
+    const categoryMap = categorys.map((category) =>
       <Content key={category.id} >
         <button onClick={() => { context?.passCategory(category.id) }}>{category.title}</button>
       </Content>
     )
-    return batata
+    return categoryMap
   }
   const { loading, error, data } = useQuery(CATEGORIES)
   if (loading) return <h1>Carregando</h1>
