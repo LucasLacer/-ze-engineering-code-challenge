@@ -54,7 +54,6 @@ export default function ProductsPage() {
   const [productsList, setProductsList] = useState<Array<cartProducts>>([])
 
   const { loading, error, data } = useQuery(POC, { variables: { pocId: vendorId, productsCategoryId: category } })
-  console.log(data)
 
   function handleCartList(product: ProductsList, action: string) {
     let tempList = null
