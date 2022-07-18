@@ -43,6 +43,7 @@ export default function Insert() {
         if (address) {
             address = 'R.+Américo+Brasiliense+-+Santo+Amaro,+São+Paulo'
             if (address) {
+                //known security issue, api on git
                 fetch("https://maps.googleapis.com/maps/api/geocode/json?address=" + address + '&key=AIzaSyChq2Ba1MD15U9pWN4dERLlkJBO7ztQ-Vc')
                     .then(response => response.json())
                     .then(info => {
